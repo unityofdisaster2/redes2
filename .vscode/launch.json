@@ -1,0 +1,11 @@
+{
+    "configurations": [
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - SArchTCPB",
+            "request": "launch",
+            "mainClass": "com.rrosales.app.SArchTCPB",
+            "projectName": "com.archivos"
+        }
+    ]
+}
