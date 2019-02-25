@@ -1,8 +1,9 @@
+package Externalizable;
 import java.util.*;
 import java.io.*;
 
 class ListaUsuarios implements Serializable{
-    private LinkedList lista = new LinkedList();
+    private LinkedList<Usuario> lista = new LinkedList<>();
     int valor;
     ListaUsuarios(String[] usuarios,String[] passwords){
         for(int i = 0; i<usuarios.length;i++){
@@ -10,7 +11,7 @@ class ListaUsuarios implements Serializable{
         }
     }
     public void muestraUsuarios(){
-        ListIterator li = lista.listIterator();
+        ListIterator<Usuario> li = lista.listIterator();
         Usuario u;
         while(li.hasNext()){
             u = (Usuario)li.next();

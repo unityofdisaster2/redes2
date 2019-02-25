@@ -4,7 +4,7 @@ import java.net.DatagramPacket;
 import java.net.InetAddress;
 import java.net.MulticastSocket;
 import java.net.UnknownHostException;
-
+import java.io.*;
 /**
  * CMulticastB
  */
@@ -30,9 +30,19 @@ public class CMulticastB {
                 //en el ciclo se estaran recibiendo mensajes del grupo
                 DatagramPacket p = new DatagramPacket(new byte[10], 10);
                 cl.receive(p);
+                BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+                String cad_cliente = br.readLine();
+                byte[] b = cad_cliente.getBytes();
                 String msj = new String(p.getData());
                 System.out.println("Datagrama recibido: " + msj);
                 System.out.println("Servidor descubierto: " + p.getAddress() + ":" + p.getPort());
+                DatagramPacket p_cliente = new DatagramPacket(b,b.length, gpo,9999);
+                cl.send(p_cliente);
+                /*try {
+                    Thread.sleep(1000);
+                } catch (Exception e) {
+                    e.printStackTrace();
+                }*/
             }
         } catch (Exception e) {
             e.printStackTrace();

@@ -6,7 +6,6 @@ import java.nio.ByteBuffer;
 import java.nio.channels.*;
 import java.util.Iterator;
 
-import javax.swing.JOptionPane;
 
 public class SEcoTCPNB {
     public static void main(String[] args) {
@@ -62,7 +61,6 @@ public class SEcoTCPNB {
                             ch.write(bb);
                             System.out.println("mensaje de: " + EECO.length() + " bytes enviado " + EECO);
                             EECO = "";
-                            continue;
                         } catch (IOException ioe) { }
                         k.interestOps(SelectionKey.OP_READ);
                         continue;

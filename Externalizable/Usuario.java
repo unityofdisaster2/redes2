@@ -25,14 +25,14 @@ class Usuario implements Externalizable{
             usuario = (String)in.readObject();
     }
     public void muestraUsuario(){
-        String cad = "Usuario: "+usuario+"Password: ";
-        if(password ==null){
+        String cad = "Usuario: "+usuario+" Password: ";
+        if(password == null){
             cad = cad+"no disponible";
         }
         else{
             cad = cad+password;
-            System.out.println(cad);
         }
+        System.out.println(cad);
     }
 
 }

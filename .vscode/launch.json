@@ -2,6 +2,19 @@
     "configurations": [
         {
             "type": "java",
+            "name": "Debug (Launch)",
+            "request": "launch",
+            "mainClass": "CEcoTCPNB"
+        },
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - CEcoTCPNB",
+            "request": "launch",
+            "mainClass": "socket_no_bloqueante.CEcoTCPNB",
+            "projectName": "Redes2_25a6e04a"
+        },
+        {
+            "type": "java",
             "name": "CodeLens (Launch) - SArchTCPB",
             "request": "launch",
             "mainClass": "com.rrosales.app.SArchTCPB",
