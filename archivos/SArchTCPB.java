@@ -9,6 +9,7 @@
  *
  * @author sandu
  */
+package archivos;
 import java.net.*;
 import java.io.*;
 

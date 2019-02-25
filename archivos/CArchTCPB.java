@@ -8,6 +8,7 @@
  *
  * @author sandu
  */
+package archivos;
 import javax.swing.JFileChooser;
 import java.net.*;
 import java.io.*;
